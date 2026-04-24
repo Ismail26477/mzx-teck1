@@ -1,7 +1,7 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, ObjectId } from 'mongoose';
 
 export interface IAllergy extends Document {
-  _id: string;
+  _id?: ObjectId;
   userId: string;
   allergen: string;
   severity: 'mild' | 'moderate' | 'severe';
