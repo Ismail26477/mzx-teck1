@@ -1,7 +1,7 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, ObjectId } from 'mongoose';
 
 export interface IReport extends Document {
-  _id: string;
+  _id?: ObjectId;
   userId: string;
   title: string;
   type: string;
