@@ -1,7 +1,7 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, ObjectId } from 'mongoose';
 
 export interface IShareToken extends Document {
-  _id: string;
+  _id?: ObjectId;
   userId: string;
   token: string;
   enabled: boolean;
